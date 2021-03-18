@@ -1,0 +1,10 @@
+aws emr create-cluster \
+--ec2-attributes '{"KeyName":"bdakp9","InstanceProfile":"EMR_EC2_DefaultRole"}' \
+--service-role EMR_DefaultRole \
+--enable-debugging \
+--release-label emr-5.32.0 \
+--log-uri 's3n://imaalk-mahout/logs/' \
+--name 'mahout-tutorial' \
+--instance-groups '[{"InstanceCount":2,"InstanceGroupType":"CORE","InstanceType":"m5.xlarge","Name":"Core Instance Group"},{"InstanceCount":1,"InstanceGroupType":"MASTER","InstanceType":"m5.xlarge","Name":"Master Instance Group"}]' \
+--scale-down-behavior TERMINATE_AT_TASK_COMPLETION \
+--region us-east-1
