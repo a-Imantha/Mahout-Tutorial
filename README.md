@@ -197,7 +197,7 @@ $ ./src/redis-server &
 ```
 ## 12. Creating the Python Script for movie recommendations
 This script will read the hdfs system to see the recommendations for a given user through web service and return the recommendations. The py script in the original tutorial to work correctly some corrections were made and the script is here.
-
+use `$ sudo nano hello.py` to create the .py file and copy the following python script to it.
 ```python
 from klein import run, route
 import redis
